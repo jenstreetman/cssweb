@@ -50,6 +50,8 @@ a img {
 /* END RESET*/
 
 
+/* GLOBAL STYLES */
+
 html{
     box-shadow: 0 0 0 30px #000 inset;
     padding: 0 30px;
@@ -57,8 +59,19 @@ html{
 }
 
 body{
+ display: flex;   
+ flex-direction: column;
  font-family: Helvetica, Arial, sans-serif;
+ min-height: 100vh;
 }
+
+.content-container{
+    display: flex;
+    flex: 1 1 auto;
+    padding-top: 10vh;  
+    width: 100%;
+}
+
 
 a{
     color: #6397b5;
@@ -75,6 +88,7 @@ h2{
 
 p{
     line-height: 1.5em;
+    margin: 0.75em 0;
 }
 
 h2 + p{
@@ -189,6 +203,34 @@ h2 + p{
 }
 
 
+/* COLUMN STYLES */
+.col-three{
+    display: flex;
+    flex: 1;
+}
+
+.col{
+    box-sizing: border-box;
+    padding: 2em;
+}
+
+.col-three .col ~ .col{
+    border-left: 1px solid rgba(0, 0, 0, 0.1);
+
+}
+
+.col-three .col-nav{
+    flex: 0 1 15em;
+}
+
+.col-three .col-content{
+    flex: 1;
+}
+
+.col-aside{
+    flex: 0 1 20em;
+}
+
 /* SOCIAL STYLES */
 .social-link{
     background-color: rgba(150,150,150, 0.5);
@@ -236,8 +278,7 @@ h2 + p{
     background-color: #c7dbfc;
     background-size: cover;
     box-sizing: border-box;
-    height:100vh;
-    padding-top: 10vh;
+    height:90vh;
 }
 
 /* This makes an arrow at the bottom */
@@ -298,24 +339,24 @@ h2 + p{
 }
 
 .home-callout{
+    align-items: center;
     background-color: #000;
     color: #fff;
+    display: flex;
     padding: 7vh 0;
 }
 
-/* .home-callout a{
-    color: #f00;
-} */
-
 .callout-title{
+    flex: 1;
     font-size: 5.75vw;
     text-align: right;
-    text-transform: uppercase
-
+    text-transform: uppercase;
 }
 
 .callout-copy{
+    flex: 0 0 45em;
     font-size: 0.8rem;
+    padding: 0 3vw;
 }
 
 
@@ -357,6 +398,51 @@ h2 + p{
 .bio-copy{
     font-size: 0.75em;
 }
+
+/* GALLERY SYTLES */
+.gallery-thumbs {
+  height: 90vh;
+  overflow: scroll;
+}
+
+ .gallery-thumbs > div {
+  cursor: pointer;
+}
+
+.gallery-thumbs img {
+  box-sizing: border-box;
+  box-shadow: 0 0 0 5px transparent;
+  display: inline-block;
+  margin: 0 0 10px;
+  opacity: 0.5;
+  transition: all 0.5s ease-in-out;
+  width: 100%;
+}
+
+.gallery-photo{
+    position: relative;
+}
+
+.gallery-photo img{
+    width: 100%;
+}
+
+.gallery-thumbs img:hover {
+  opacity: 1;
+}
+.gallery-thumbs .current img {
+  box-shadow: 0 0 0 5px #ed6e2f;
+  opacity: 1;
+} 
+
+gallery.info{
+    font-size: 0.8rem;
+}
+
+gallery.info h3{
+    margin-bottom: 1em;
+}
+
 
 
 
