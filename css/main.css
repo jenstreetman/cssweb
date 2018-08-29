@@ -710,12 +710,13 @@ gallery.info h3{
 }
 
 /* MEDIA STYLES */
- @media (max-width: 1000px) 
+ @media (max-width: 800px) 
  
  {
     html {
         box-shadow: none;
         padding: 0;
+        width: 100vw;
     }
 
     /* HEADER STYLES */
@@ -785,6 +786,8 @@ gallery.info h3{
         flex: 1;
     }
     
+    /* MOBILE MENU */
+
     .show-mobile-menu{
         display: block;    
         float: right;
@@ -813,11 +816,14 @@ gallery.info h3{
     .header-nav li{
         border-color: none;
         display: block;
-        margin-top: 1em;
+        margin: 1em 0 0;
+        padding: 0;
     }
 
     .header-nav li ~ li{
-    border: none;
+        border: none;
+        margin: 0;
+        padding: 1em 0 0;
     }
 
     .header-nav li:last-child{
@@ -844,8 +850,6 @@ gallery.info h3{
         width: 100%;
         text-align: center;
         text-transform: uppercase;
-
-
     }
     
     /* HIDE THE DROPDOWN IN THE NAV */
