@@ -667,11 +667,11 @@ gallery.info h3{
     width: 100%;
 }
 
-.post-content,
+/* .post-content, */
 .post-footer{
     margin: auto;
-    max-width: 40em;
-    width: 85vw;
+    max-width: 40em; */
+    width: 85vw; */
 }
 
 .pull-left{
